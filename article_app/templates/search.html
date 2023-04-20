@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+    form {
+        border: 1px solid black;
+        padding: 100px;
+        margin-top: 20px;
+        width: 500px;
+        background-color: #f0f0f0;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    input[type="text"], select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 50px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 530px;
+        left: 330px;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #3e8e41;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
+    }
+</style>
+
+<form method="post" id="form">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <table>
+        {{ category_filter.as_table }}
+    </table>
+    <input type="submit" value="Найти">
+</form>
+
+{% endblock %}
+

@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+{#    <!-- строка поиска -->#}
+{#    <form action="{% url 'search' %}" method="get">#}
+{#        <input type="text" name="keyword" placeholder="Search...">#}
+{#        <button type="submit">Search</button>#}
+{#    </form>#}
+
+    <!-- кнопка "Домой" -->
+    <a href="/" class="home-btn">Home</a>
+
+    {% block content %}{% endblock %}
+
+</body>
+</html>

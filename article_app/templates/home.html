@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <head>
+        <title>Search</title>
+        <style type="text/css">
+            .container {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                width: 60%;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+            .column {
+                width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="column">
+                <h2>By Year</h2>
+                <ul>
+                    <li><a href="articles/2022" style="text-decoration: none">2022</a></li>
+                    <li><a href="articles/2021" style="text-decoration: none">2021</a></li>
+                    <li><a href="articles/2020" style="text-decoration: none">2020</a></li>
+                    <li><a href="articles/2019" style="text-decoration: none">2019</a></li>
+                    <li><a href="articles/2018" style="text-decoration: none">2018</a></li>
+                    <li><a href="articles/2017" style="text-decoration: none">2017</a></li>
+                    <li><a href="articles/2016" style="text-decoration: none">2016</a></li>
+                    <li><a href="articles/2015" style="text-decoration: none">2015</a></li>
+                    <li><a href="articles/2014" style="text-decoration: none">2014</a></li>
+                    <li><a href="articles/2013" style="text-decoration: none">2013</a></li>
+                    <li><a href="articles/2012" style="text-decoration: none">2012</a></li>
+                    <li><a href="articles/2011" style="text-decoration: none">2011</a></li>
+                    <li><a href="articles/2010" style="text-decoration: none">2010</a></li>
+                    <li><a href="articles/2009" style="text-decoration: none">2009</a></li>
+                    <li><a href="articles/2008" style="text-decoration: none">2008</a></li>
+                    <li><a href="articles/2007" style="text-decoration: none">2007</a></li>
+                    <li><a href="articles/2006" style="text-decoration: none">2006</a></li>
+                    <li><a href="articles/2005" style="text-decoration: none">2005</a></li>
+                    <li><a href="articles/2004" style="text-decoration: none">2004</a></li>
+                    <li><a href="articles/2003" style="text-decoration: none">2003</a></li>
+                    <li><a href="articles/2002" style="text-decoration: none">2002</a></li>
+                    <li><a href="articles/2001" style="text-decoration: none">2001</a></li>
+                    <li><a href="articles/2000" style="text-decoration: none">2000</a></li>
+                    <li><a href="articles/1999" style="text-decoration: none">1999</a></li>
+                    <li><a href="articles/1998" style="text-decoration: none">1998</a></li>
+                    <li><a href="articles/1997" style="text-decoration: none">1997</a></li>
+                    <li><a href="articles/1996" style="text-decoration: none">1996</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h2>By Category</h2>
+                <ul>
+                    <li><a href="articles/Foundations" style="text-decoration: none">Foundations</a></li>
+                    <li><a href="articles/Secret-key cryptography" style="text-decoration: none">Secret-key cryptography</a></li>
+                    <li><a href="articles/Cryptographic protocols" style="text-decoration: none">Cryptographic protocols</a></li>
+                    <li><a href="articles/Public-key cryptography" style="text-decoration: none">Public-key cryptography</a></li>
+                    <li><a href="articles/Applications" style="text-decoration: none">Applications</a></li>
+                    <li><a href="articles/Implementation" style="text-decoration: none">Implementation</a></li>
+                    <li><a href="articles/Attacks and cryptanalysis" style="text-decoration: none">Attacks and cryptanalysis</a></li>
+                    <br>
+                    <li><a href="articles/Uncategorized" style="text-decoration: none">Uncategorized</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <a href="{% url 'search_form' %}" class="btn btn-primary">Перейти к поиску</a>
+            </div>
+        </div>
+    </body>
+{% endblock %}
